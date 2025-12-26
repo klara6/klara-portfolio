@@ -1,0 +1,336 @@
+/* ========================
+   Root Colors & Variables
+======================== */
+:root {
+  --header-color: #58C4C6;
+  --text-color: #E0E0E0;
+  --accent-shadow: rgba(88,196,198,0.2);
+}
+
+/* ========================
+   Global Styles
+======================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientAnim 15s ease infinite;
+  color: var(--text-color);
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.7;
+  padding: 40px 20px;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradientAnim {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+#tsparticles { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
+#scroll-bar { position: fixed; top:0; left:0; height:4px; background:#58C4C6; width:0; z-index:999; }
+
+/* ========================
+   Hero Section
+======================== */
+.hero { text-align: center; margin-bottom: 40px; }
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--header-color);
+  margin-bottom: 8px;
+}
+.typing { font-size: 1.2rem; margin-bottom: 8px; }
+.contact a { color: var(--header-color); text-decoration: none; margin: 0 6px; font-weight: 500; transition:0.3s; }
+.contact a:hover { text-decoration: underline; }
+
+/* ========================
+   Fixed GitHub Button
+======================== */
+.resume-btn {
+  position: fixed;
+  bottom: 20px; right: 20px;
+  background: #58C4C6; color: #0f2027;
+  padding: 12px 18px; border-radius: 8px;
+  font-weight: 500; text-decoration: none;
+  box-shadow: 0 4px 10px rgba(88,196,198,0.3);
+  transition:0.3s; z-index: 999;
+}
+.resume-btn:hover { box-shadow: 0 8px 20px rgba(88,196,198,0.6); transform: translateY(-2px); }
+
+/* ========================
+   Top-right Social Icons
+======================== */
+.social-icons {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 20px;
+  z-index: 100;
+}
+
+.social-icons a {
+  color: #64ffda;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* ========================
+   Navigation
+======================== */
+.nav { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-bottom:40px; }
+.nav a { color: var(--header-color); text-decoration:none; font-weight:500; font-size:0.95rem; transition:0.3s; }
+.nav a:hover { text-decoration: underline; }
+
+/* ========================
+   Sections & Headings
+======================== */
+section { max-width:1000px; margin:0 auto 40px; opacity:0; transform:translateY(20px); transition:all 0.8s ease-out; scroll-margin-top:60px; }
+h3 {
+  font-family:'Orbitron', sans-serif; font-size:1.6rem;
+  margin-bottom:16px; border-left:3px solid var(--header-color); padding-left:10px;
+}
+
+/* ========================
+   Cards
+======================== */
+.card { background: rgba(255,255,255,0.06); backdrop-filter: blur(14px); padding:20px;
+  border-radius:14px; margin-bottom:16px; border:1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-4px); box-shadow:0 8px 20px var(--accent-shadow); }
+
+/* ========================
+   Grid Layout
+======================== */
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
+
+/* ========================
+   Skill Bars
+======================== */
+.skill-bar { margin-bottom:12px; }
+.skill-name { font-weight:500; font-size:0.95rem; margin-bottom:4px; }
+.progress { background: rgba(255,255,255,0.1); border-radius:8px; height:12px; overflow:hidden; }
+.progress-fill { height:100%; width:0; background:#58C4C6; border-radius:8px; transition: width 1.2s ease-out; }
+
+/* ========================
+   Project Highlights Carousel
+======================== */
+#project-highlights {
+  width: 100%;
+  margin: 0 auto 60px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Bottom overlay  ===== */
+.carousel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  /* Gradient */
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0)
+  );
+
+  opacity: 1; 
+}
+
+/* Title */
+.carousel-overlay strong {
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* View Repo button */
+.carousel-link {
+  padding: 6px 16px;
+  background: #58C4C6;
+  color: #0f2027;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-link:hover {
+  opacity: 0.85;
+}
+
+/* ========================
+   Navigation Arrows
+======================== */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 60px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid #58C4C6;
+  color: #58C4C6;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(88,196,198,0.6);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(88,196,198,0.25);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(88,196,198,0.9);
+}
+
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
+
+/* ========================
+    Height
+======================== */
+@media (max-width: 768px) {
+  .carousel { height: 280px; }
+}
+
+@media (max-width: 480px) {
+  .carousel { height: 220px; }
+}
+
+/* ========================
+   Project Cards
+======================== */
+.project-card { position:relative; overflow:hidden; }
+.project-card .overlay {
+  position:absolute; bottom:0; left:0; width:100%; height:0;
+  background:rgba(0,0,0,0.7);
+  color:#E0E0E0; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  padding:10px; transition:height 0.4s ease; font-size:0.9rem;
+}
+.project-card:hover .overlay { height:100%; }
+.project-card .overlay a { color:#58C4C6; margin-top:6px; text-decoration:none; }
+.project-card .overlay a:hover { text-decoration: underline; }
+
+/* ========================
+   Publication Cards with Images
+======================== */
+.publication-card {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.publication-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Content container */
+.publication-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 12px;
+}
+
+/* Title */
+.publication-content strong {
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+/* Read Article button */
+.publication-content a {
+  padding: 6px 16px;
+  background: var(--header-color);
+  color: #0f2027;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: opacity 0.3s;
+}
+
+.publication-content a:hover {
+  opacity: 0.85;
+}
+
+/* ========================
+   Education Logo
+======================== */
+.education-card {
+  position: relative; 
+  padding: 20px 140px 20px 20px; 
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 16px;
+}
+
+/* Education logo position */
+.edu-logo-right { 
+  width: 100px;       
+  height: auto;
+  position: absolute; 
+  top: 50%;         
+  right: 20px;       
+  transform: translateY(-50%); 
+}
+
+/* ========================
+   Footer
+======================== */
+footer { text-align:center; opacity:0.6; margin-top:60px; font-size:0.9rem; }
