@@ -1,0 +1,734 @@
+/* ========================
+   Root Colors & Variables
+======================== */
+:root {
+  --header-color: #E0E0E0;
+  --text-color: #D0D0D0;
+}
+
+/* ========================
+   Intro Animation
+======================== */
+
+/* Intro overlay */
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #2A2A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#intro-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #E0E0E0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #64ffda;
+  animation: blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { border-color: #64ffda; }
+  25%, 75% { border-color: transparent; }
+}
+
+#hero-title {
+  opacity: 0;
+}
+
+/* ========================
+   Global Styles
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2A2A2A; 
+  color: var(--text-color);
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.7;
+  padding: 40px 20px;
+  scroll-behavior: smooth;
+}
+
+#scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #64ffdba6;
+  width: 0;
+  z-index: 999;
+}
+
+/* ========================
+   Hero Section
+======================== */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--header-color);
+  margin-bottom: 8px;
+}
+
+.typing {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.contact a {
+  color: var(--header-color);
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   Top-right Social Icons
+======================== */
+.social-icons {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 20px;
+  z-index: 100;
+}
+
+.social-icons a {
+  color: #64ffda;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* ========================
+   Navigation
+======================== */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.nav a {
+  color: var(--header-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   Sections & Headings
+======================== */
+section {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+  scroll-margin-top: 60px;
+}
+
+h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  border-left: 3px solid var(--header-color);
+  padding-left: 10px;
+}
+
+/* ========================
+   Technical Skills Box Overlay
+======================== */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.skill-box {
+  flex: 1 1 22%;       
+  min-width: 220px;   
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(88,196,198,0.25);
+}
+
+.skill-box h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #64ffda;
+  margin-bottom: 12px;
+}
+
+.skill-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.skill-box ul li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(224,224,224,0.85);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .skill-box {
+    flex: 1 1 48%; 
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-box {
+    flex: 1 1 100%; 
+  }
+}
+
+/* ========================
+   Cards
+======================== */
+.card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--accent-shadow);
+}
+
+/* ========================
+   Grid Layout
+======================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* ========================
+   Project Highlights Carousel
+======================== */
+#project-highlights {
+  width: 100%;
+  margin: 0 auto 60px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Bottom overlay ===== */
+.carousel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0)
+  );
+  opacity: 1; 
+}
+
+.carousel-overlay strong {
+  font-size: 1.25rem;
+  color: #E0E0E0;
+  text-align: center;
+}
+
+.carousel-link {
+  padding: 6px 16px;
+  background: #64ffdbac;
+  color: #0f2027;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-link:hover {
+  opacity: 0.85;
+}
+
+/* ========================
+   Navigation Arrows
+======================== */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 60px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid #64ffdbac;
+  color: #64ffdbac;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(88,196,198,0.6);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(88,196,198,0.25);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(88,196,198,0.9);
+}
+
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
+
+/* ========================
+    Carousel Height Responsiveness
+======================== */
+@media (max-width: 768px) {
+  .carousel { height: 280px; }
+}
+
+@media (max-width: 480px) {
+  .carousel { height: 220px; }
+}
+
+/* ========================
+   Project Cards Overlay
+======================== */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(0,0,0,0.7);
+  color: #E0E0E0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: height 0.4s ease;
+  font-size: 0.9rem;
+}
+
+.project-card:hover .overlay { height: 100%; }
+
+.project-card .overlay a {
+  color: #64ffda;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+.project-card .overlay a:hover { text-decoration: underline; }
+
+/* ========================
+   Publication Cards
+======================== */
+.publication-card {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.publication-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.publication-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 12px;
+}
+
+.publication-content strong {
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.publication-content a {
+  padding: 6px 16px;
+  background: var(--header-color);
+  color: #0f2027;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: opacity 0.3s;
+}
+
+.publication-content a:hover {
+  opacity: 0.85;
+}
+
+/* ========================
+   Education Card Styling
+======================== */
+.education-card {
+  position: relative;
+  padding: 20px 140px 20px 20px; 
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.edu-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edu-info strong {
+  font-size: 1rem;
+  color: #E0E0E0;
+  margin-bottom: 4px;
+}
+
+.edu-info span {
+  font-size: 0.85rem;
+  color: rgba(224,224,224,0.6);
+}
+
+.edu-logo-right {
+  width: 90px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .edu-logo-right {
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* ========================
+   Certifications & Training Overlay
+======================== */
+.cert-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  color: #E0E0E0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 0.70rem;
+  z-index: 10; 
+}
+
+.cert-card:hover .cert-overlay {
+  opacity: 1;
+}
+
+.cert-card .cert-header,
+.cert-card .cert-provider {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ========================
+   Awards & Achievements Overlay
+======================== */
+.award-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center; 
+  cursor: pointer;
+}
+
+.award-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  color: #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.75rem;
+}
+
+.award-card:hover .award-overlay {
+  opacity: 1;
+}
+
+/* ========================
+   Leadership & Activities Overlay
+======================== */
+#leadership .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.lead-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  color: #E0E0E0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 0.75rem;
+  z-index: 10; 
+}
+
+#leadership .card:hover .lead-overlay {
+  opacity: 1;
+}
+
+#leadership .card {
+  z-index: 1;
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+  text-align: center;
+  opacity: 0.6;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* ========================
+   Certifications Styling
+======================== */
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cert-logo {
+  width: 50px;
+  height: auto; 
+  flex-shrink: 0;
+}
+
+.cert-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #E0E0E0;
+}
+
+.cert-provider {
+  font-size: 0.85rem;
+  color: rgba(224, 224, 224, 0.6);
+  margin-left: 52px;
+  letter-spacing: 0.3px;
+}
+
+.card:hover .cert-logo {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* ========================
+   Center text in main boxes
+======================== */
+
+/* Card boxes */
+.card {
+    text-align: center;
+}
+
+/* Project cards */
+.project-card {
+    text-align: center;
+}
+
+/* Position of overlay content in project cards */
+.project-card .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Publication cards */
+.publication-card {
+    text-align: center;
+}
+
+/* Publication content inside the cards */
+.publication-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ========================
+   Certifications & Training
+======================== */
+.cert-card {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
+}
+
+/* Header: logo + title */
+.cert-header {
+    display: flex;
+    align-items: center;          
+}
+
+/* Logo sizing */
+.cert-logo {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+/* Course title position */
+.cert-title {
+    display: block;
+    margin-left: 12px;           /* space from logo */
+    text-align: left;
+    font-weight: 600;
+    color: #E0E0E0;
+    flex: 1;                 
+}
+
+/* Organization/provider position */
+.cert-provider {
+    display: block;
+    text-align: center;
+    margin-left: 0;               
+    width: 100%;
+    font-size: 0.85rem;
+    color: rgba(224, 224, 224, 0.6);
+}

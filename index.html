@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Klara's Portfolio</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ======================================================
+     INTRO OVERLAY
+     This is the full-screen intro that types out a welcome
+     message when the page loads.
+======================================================= -->
+<div id="intro">
+  <h1 id="intro-title"></h1>
+</div>
+
+<!-- Main content container -->
+<div id="main-content">
+  <!-- Your content here -->
+</div>
+
+</body>
+</html>
+
+
+    <!-- ======================================================
+         SCROLL PROGRESS BAR
+         A small bar at the top that fills as you scroll down
+    ======================================================= -->
+    <div id="scroll-bar"></div>
+
+    <!-- ======================================================
+         SOCIAL ICONS (TOP-RIGHT)
+         Links to GitHub, LinkedIn, Medium
+    ======================================================= -->
+    <div class="social-icons">
+      <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      <a href="https://medium.com/@klara6" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i></a>
+    </div>
+
+    <!-- ======================================================
+         HERO SECTION
+         Page introduction with name and quick contact links
+    ======================================================= -->
+    <header class="hero">
+      <h1>Klara's Portfolio</h1>
+      <p class="contact">
+        <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer">GitHub</a> · 
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+        <a href="https://medium.com/@klara6" target="_blank" rel="noopener noreferrer">Medium</a>
+      </p>
+    </header>
+
+    <!-- ======================================================
+         NAVIGATION
+         Internal page links for smooth scrolling
+    ======================================================= -->
+    <nav class="nav">
+      <a href="#summary">Professional Summary</a>
+      <a href="#skills">Technical Skills</a>
+      <a href="#project-highlights">Projects</a>
+      <a href="#publications">Selected Publications</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications & Training</a>
+      <a href="#awards">Awards & Achievements</a>
+      <a href="#leadership">Leadership & Activities</a>
+      <a href="#contact">Contact Information</a>
+    </nav>
+
+    <!-- ======================================================
+         PROFESSIONAL SUMMARY
+    ======================================================= -->
+    <section id="summary">
+      <h3>Professional Summary</h3>
+      <p>An aspiring software engineer based in London with a passion for coding, machine learning, and building applications.</p>
+    </section>
+
+    <!-- ======================================================
+         TECHNICAL SKILLS
+         Organized into skill-boxes for readability
+    ======================================================= -->
+    <section id="skills">
+      <h3>Technical Skills</h3>
+
+      <div class="skills-container">
+        <div class="skill-box">
+          <h4>Languages</h4>
+          <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>Java</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h4>Databases</h4>
+          <ul>
+            <li>MySQL</li>
+            <li>Postgres</li>
+            <li>MongoDB</li>
+            <li>Redis</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h4>Frameworks / Libraries</h4>
+          <ul>
+            <li>NodeJS</li>
+            <li>React</li>
+            <li>Django</li>
+            <li>Pytest</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h4>Cloud / DevOps / Tools</h4>
+          <ul>
+            <li>AWS</li>
+            <li>Docker</li>
+            <li>Azure</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PROJECT HIGHLIGHTS / CAROUSEL
+         Featured projects with overlay and repo links
+    ======================================================= -->
+    <section id="project-highlights">
+      <h3>Project Highlights</h3>
+
+      <div class="carousel">
+        <div class="carousel-track">
+
+          <div class="carousel-item">
+            <img src="assets/project1.png" alt="Project 1">
+            <div class="carousel-overlay">
+              <strong>Project 1: Upcoming</strong>
+              <a href="https://github.com/klara6"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="carousel-link">
+                View Repo
+              </a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/project1.png" alt="Project 2">
+            <div class="carousel-overlay">
+              <strong>Project 2</strong>
+              <a href="https://github.com/klara6"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="carousel-link">
+                View Repo
+              </a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="assets/project1.png" alt="Project 3">
+            <div class="carousel-overlay">
+              <strong>Project 3</strong>
+              <a href="https://github.com/klara6"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="carousel-link">
+                View Repo
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel navigation buttons -->
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PROJECTS GRID
+         Six project cards (all upcoming for now)
+    ======================================================= -->
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="grid">
+        <!-- Project cards repeated -->
+        <div class="card project-card">
+          <div class="project-content"><strong>Upcoming</strong><p>Upcoming</p></div>
+          <div class="overlay">
+            <p>Tech: TBD</p>
+            <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="project-content"><strong>Upcoming</strong><p>Upcoming</p></div>
+          <div class="overlay">
+            <p>Tech: TBD</p>
+            <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="project-content"><strong>Upcoming</strong><p>Upcoming</p></div>
+          <div class="overlay">
+            <p>Tech: TBD</p>
+            <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="project-content"><strong>Upcoming</strong><p>Upcoming</p></div>
+          <div class="overlay">
+            <p>Tech: TBD</p>
+            <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="project-content"><strong>Upcoming</strong><p>Upcoming</p></div>
+          <div class="overlay">
+            <p>Tech: TBD</p>
+            <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="project-content"><strong>Upcoming</strong><p>Upcoming</p></div>
+          <div class="overlay">
+            <p>Tech: TBD</p>
+            <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SELECTED PUBLICATIONS
+         Publications with image and article link
+    ======================================================= -->
+    <section id="publications">
+      <h3>Selected Publications</h3>
+
+      <div class="grid">
+
+        <div class="card publication-card">
+          <img src="assets/publication1.png" alt="Quantum Computing Article">
+          <div class="publication-content">
+            <strong>
+              What Patent Data Really Tells Us About the Future of Quantum Computing
+            </strong>
+            <a href="https://medium.com/@klara6/what-patent-data-really-tells-us-about-the-future-of-quantum-computing-0d000922b0b4"
+               target="_blank"
+               rel="noopener noreferrer">
+              Read Article
+            </a>
+          </div>
+        </div>
+
+        <div class="card publication-card">
+          <img src="assets/project1.png" alt="Publication 2">
+          <div class="publication-content">
+            <strong>Publication 2</strong>
+            <a href="https://medium.com/@klara6"
+               target="_blank"
+               rel="noopener noreferrer">
+              Read Article
+            </a>
+          </div>
+        </div>
+
+        <div class="card publication-card">
+          <img src="assets/project1.png" alt="Publication 3">
+          <div class="publication-content">
+            <strong>Publication 3</strong>
+            <a href="https://medium.com/@klara6"
+               target="_blank"
+               rel="noopener noreferrer">
+              Read Article
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         EDUCATION SECTION
+         Shows degree, GPA, and university logo
+    ======================================================= -->
+    <section id="education">
+      <h3>Education</h3>
+      <div class="card education-card">
+        <div class="edu-info">
+          <strong>LLB in Law & LLM in International Law</strong>
+          <span>First Class Honours / Distinction / GPA: 4.0</span>
+        </div>
+        <img src="assets/kings_college_logo.png" alt="King's College London Logo" class="edu-logo-right">
+      </div>
+    </section>
+
+<!-- ======================================================
+     CERTIFICATIONS & TRAINING
+======================================================= -->
+<section id="certifications">
+  <h3>Certifications & Training</h3>
+
+  <div class="grid">
+    <!-- Individual certifications -->
+    <div class="card cert-card">
+      <div class="cert-overlay" style="padding: 20px; max-width: 500px; margin: 0 auto;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <li>Python Fundamentals</li>
+            <li>Blockchain & DLT</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Machine Learning & Deep Learning</li>
+            <li>Cybersecurity</li>
+          </ul>
+      </div>
+      <div class="cert-header">
+        <img src="assets/kings_college_logo.png" alt="King's College London" class="cert-logo">
+        <span class="cert-title">Coding for Lawyers</span>
+      </div>
+      <span class="cert-provider">King’s College London</span>
+    </div>
+
+    <div class="card cert-card">
+      <div class="cert-overlay" style="padding: 20px; max-width: 500px; margin: 0 auto;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <li>Design Secure Architectures</li>
+            <li>Design Resilient Architectures</li>
+            <li>Design High‑Performing Architectures</li>
+            <li>Design Cost‑Optimized Architectures</li>
+          </ul>
+      </div>
+      <div class="cert-header">
+        <img src="assets/aws.png" alt="AWS" class="cert-logo">
+        <span class="cert-title">AWS Solutions Architect</span>
+      </div>
+      <span class="cert-provider">Amazon Web Services</span>
+    </div>
+
+    <div class="card cert-card">
+      <div class="cert-overlay" style="padding: 20px; max-width: 500px; margin: 0 auto;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <li>Designing Data Processing Systems</li>
+            <li>Preparing & Using Data for Analysis</li>
+            <li>Ingesting & Processing Data</li>
+            <li>Maintaining & Automating Data Workloads</li>
+          </ul>
+      </div>
+      <div class="cert-header">
+        <img src="assets/google.png" alt="Google" class="cert-logo">
+        <span class="cert-title">Professional Data Engineer</span>
+      </div>
+      <span class="cert-provider">Google Cloud</span>
+    </div>
+
+    <div class="card cert-card">
+      <div class="cert-overlay" style="padding: 20px; max-width: 500px; margin: 0 auto;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+    <li>Stakeholder & Client Communication</li>
+    <li>Presentation & Data Visualization</li>
+    <li>Collaboration & Team Communication</li>
+    <li>Research, Measurement, and Analytics</li>
+  </ul>
+</div>
+
+
+      <div class="cert-header">
+        <img src="assets/strategic.png" alt="King's College London" class="cert-logo">
+        <span class="cert-title">Strategic Communications</span>
+      </div>
+      <span class="cert-provider">King’s College London</span>
+    </div>
+
+    <div class="card cert-card">
+      <div class="cert-overlay" style="padding: 20px; max-width: 500px; margin: 0 auto;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+    <li>Data Types & Variables</li>
+    <li>Comparisons</li>
+    <li>Loops & Functions</li>
+    <li>Working with Data</li>
+    <li>Exceptions & Error Handling</li>
+  </ul>
+      </div>
+      <div class="cert-header">
+        <img src="assets/cfg.png" alt="Code First Girls" class="cert-logo">
+        <span class="cert-title">Python Kickstarter</span>
+      </div>
+      <span class="cert-provider">Code First Girls</span>
+    </div>
+
+    <div class="card cert-card">
+      <div class="cert-overlay" style="padding: 20px; max-width: 500px; margin: 0 auto;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+    <li>Data Basics</li>
+    <li>Joins & Views</li>
+    <li>Functions</li>
+    <li>Building Databases</li>
+    <li>Retrieving, Sorting, & Modifying Data</li>
+    <li>Grouping & Cleaning Data<li>
+  </ul>
+      </div>
+      <div class="cert-header">
+        <img src="assets/cfg.png" alt="Code First Girls" class="cert-logo">
+        <span class="cert-title">Data & SQL Kickstarter</span>
+      </div>
+      <span class="cert-provider">Code First Girls</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     AWARDS & ACHIEVEMENTS
+======================================================= -->
+<section id="awards">
+  <h3>Awards & Achievements</h3>
+  <div class="grid">
+    <div class="card award-card">
+      The King's Experience Award: Leadership
+      <div class="award-overlay">
+       Leveraged stream competencies to found and serve as society President, leading group initiatives. 
+      </div>
+    </div>
+    <div class="card award-card">
+      The Enterprise Institute Enterprise Award
+      <div class="award-overlay">
+        Recognized for completing a structured entrepreneurial development program, participating in workshops, and undertaking skill assessments aimed at preparing students to lead impactful projects.
+      </div>
+    </div>
+    <div class="card award-card">
+      Strategic Negotiations: Highest ranking member of cohort
+      <div class="award-overlay">
+        Demonstrated sound negotiation methods and strategic techniques, achieving successful outcomes in complex negotiation scenarios.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ======================================================
+         LEADERSHIP & ACTIVITIES
+    ======================================================= -->
+<section id="leadership">
+  <h3>Leadership & Activities</h3>
+  <div class="grid">
+    <div class="card">
+      CS50 Hackathon at Meta in London
+      <div class="lead-overlay">Participated in a CS50 Hackathon, collaborated on software development projects and coding challenges.</div>
+    </div>
+    <div class="card">
+      Tech for Good Hackathon
+      <div class="lead-overlay">Participated in a Tech for Good Hackathon, collaborating on projects to develop technology solutions for social impact.</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      Founder & President: Commercial Law Society
+      <div class="lead-overlay">Led student society, building industry partnerships and running workshops and networking events.</div>
+    </div>
+    <div class="card">
+      Hackathon...
+      <div class="lead-overlay">Participated...</div>
+    </div>
+  </div>
+</section> 
+
+
+    <!-- ======================================================
+         CONTACT INFORMATION
+    ======================================================= -->
+    <section id="contact">
+      <h3>Contact Information</h3>
+      <p>
+        LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">linkedin.com/in/</a><br>
+        GitHub: <a href="https://github.com/klara6" target="_blank" rel="noopener noreferrer">github.com/klara6</a><br>
+        Medium: <a href="https://medium.com/@klara6" target="_blank" rel="noopener noreferrer">medium.com/@klara6</a>
+      </p>
+    </section>
+
+    <!-- ======================================================
+         FOOTER
+    ======================================================= -->
+    <footer>© All rights reserved.</footer>
+
+  </div> <!-- End of main-content -->
+
+  <!-- ======================================================
+       SCRIPTS
+       External JS for intro animation, scroll effects, carousel
+  ======================================================= -->
+  <script src="script.js"></script>
+
+  </body>
+</html>
